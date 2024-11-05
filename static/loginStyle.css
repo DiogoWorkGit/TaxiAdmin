@@ -60,7 +60,7 @@ body {
 }
 
 .inputText:focus ~ .floating-label,
-.inputText:not(:focus):invalid ~ .floating-label {
+.inputText:not(:focus):valid ~ .floating-label {
     top: -8px;
     left: 15px;
     font-size: 12px;
