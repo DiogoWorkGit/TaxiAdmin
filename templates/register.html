@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar - TaxiAdmin</title>
+    <link rel="stylesheet" href="static/loginStyle.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>TaxiAdmin</h2>
+            <p>Crie uma nova conta</p>
+            <form action="http://localhost:5000/register" method="post">
+                <div class="input-container">
+                    <input type="text" name="email" class="inputText" required>
+                    <span class="floating-label">Digite seu email</span>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="senha" class="inputText" required>
+                    <span class="floating-label">Digite sua senha</span>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="senha_check" class="inputText" required>
+                    <span class="floating-label">Confirme sua senha</span>
+                </div>
+                <button type="submit" value = "submit" class="login-btn">REGISTRAR</button>
+            </form>
+            <a href="/login" class="create-account">Já tem uma conta?</a>
+        </div>
+    </div>
+</body>
+</html>

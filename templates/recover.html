@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha - TaxiAdmin</title>
+    <link rel="stylesheet" href="static/loginStyle.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>TaxiAdmin</h2>
+            <p>Recupere sua senha</p>
+            <form action="http://localhost:5000/recover" method="post">
+               <div class="input-container">
+                  <input type="text" name="email-recover" class="inputText" required>
+                  <span class="floating-label">Digite seu email</span>
+               </div>
+                <button type="submit" value = "submit" class="login-btn">RECUPERAR</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-box p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Implementação do container com placeholder interativo */
+
+.input-container {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.inputText {
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+}
+
+.inputText:focus ~ .floating-label,
+.inputText:not(:focus):invalid ~ .floating-label {
+    top: -8px;
+    left: 15px;
+    font-size: 12px;
+    opacity: 1;
+    background-color: #f5f5f5;
+    padding: 0 5px;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 10px;
+    font-size: 14px;
+    color: #999;
+    transition: 0.2s ease all;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Fim Implementação do container com placeholder interativo */
+
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    text-align: left;
+    font-size: 14px;
+}
+
+.login-box input::placeholder {
+    color: #999;
+}
+
+.forgot-password {
+    margin-bottom: 20px;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    padding: 10px;
+    background-color: #00ADEF;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.login-btn:hover {
+    background-color: #0094cc;
+}
+
+.create-account {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.create-account:hover {
+    text-decoration: underline;
+}
