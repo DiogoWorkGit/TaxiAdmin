@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/navstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <nav>
+    <!-- Checkbox for toggling menu -->
+    <input type="checkbox" id="check">
+
+    <!-- Menu icon -->
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <!-- Site logo -->
+    <label class="logo">TaxiAdmin</label>
+
+    <!-- Navigation links -->
+    <ul>
+      <li><a class="{% if active_page == 'dashboard' %}active{% endif %}" href="/dashboard">Painel Financeiro</a></li>
+      <li><a class="{% if active_page == 'corridas' %}active{% endif %}" href="/corridas">Corridas</a></li>
+      <li><a class="{% if active_page == 'prever_corridas' %}active{% endif %}" href="/prever-corridas">Onde Tem Corridas?</a></li>
+      <li><a class="{% if active_page == 'configuracoes' %}active{% endif %}" href="#">Configurações</a></li>
+      <li><a href="#">Desconectar</a></li>
+    </ul>
+  </nav>
+
+</body>
+
+</html>

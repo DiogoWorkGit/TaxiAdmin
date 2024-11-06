@@ -6,19 +6,12 @@ app = Flask(__name__)
 def hello_world():
     return redirect(url_for('login'))
 
-@app.route('/dashboard/<email>/<senha>')
-def dashboard(email, senha):
-    if not email or not senha:
-        return redirect(url_for('login'))
-    else:
-        return 'Welcome %s' % email
-
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
-        email = request.form['email']
-        senha = request.form['senha']
-        return redirect(url_for('dashboard', email=email, senha=senha))
+        #email = request.form['email']
+        #senha = request.form['senha']
+        return redirect('/dashboard')
     else:
         return render_template('login.html')
     
@@ -29,6 +22,18 @@ def recover():
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     return render_template('register.html')
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html', active_page='dashboard')
+
+@app.route('/corridas')
+def corridas():
+    return render_template('corridas.html', active_page='corridas')
+
+@app.route('/prever-corridas')
+def prever_corridas():
+    return render_template('prever-corridas.html', active_page='prever_corridas')
 
 if __name__ == '__main__':
 
